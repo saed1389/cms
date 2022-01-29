@@ -6,7 +6,8 @@
             <div class="wrap-breadcrumb">
                 <ul>
                     <li class="item-link"><a href="/" class="link">home</a></li>
-                    <li class="item-link"><span>Digital & Electronics</span></li>
+                    <li class="item-link"><span>Product Categories</span></li>
+                    <li class="item-link"><span>{{$category_name}}</span></li>
                 </ul>
             </div>
             <div class="row">
@@ -21,7 +22,7 @@
 
                     <div class="wrap-shop-control">
 
-                        <h1 class="shop-title">Digital & Electronics</h1>
+                        <h1 class="shop-title">{{$category_name}}</h1>
 
                         <div class="wrap-right">
 
@@ -122,12 +123,20 @@
                                 <li class="list-item"><a class="filter-link " href="#">Printer & Ink</a></li>
                                 <li class="list-item"><a class="filter-link " href="#">CPUs & Prosecsors</a></li>
                                 <li class="list-item"><a class="filter-link " href="#">Sound & Speaker</a></li>
-                                <li class="list-item"><a class="filter-link " href="#">Shop Smartphone & Tablets</a></li>
-                                <li class="list-item default-hiden"><a class="filter-link " href="#">Printer & Ink</a></li>
-                                <li class="list-item default-hiden"><a class="filter-link " href="#">CPUs & Prosecsors</a></li>
-                                <li class="list-item default-hiden"><a class="filter-link " href="#">Sound & Speaker</a></li>
-                                <li class="list-item default-hiden"><a class="filter-link " href="#">Shop Smartphone & Tablets</a></li>
-                                <li class="list-item"><a data-label='Show less<i class="fa fa-angle-up" aria-hidden="true"></i>' class="btn-control control-show-more" href="#">Show more<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                                <li class="list-item"><a class="filter-link " href="#">Shop Smartphone & Tablets</a>
+                                </li>
+                                <li class="list-item default-hiden"><a class="filter-link " href="#">Printer & Ink</a>
+                                </li>
+                                <li class="list-item default-hiden"><a class="filter-link " href="#">CPUs &
+                                        Prosecsors</a></li>
+                                <li class="list-item default-hiden"><a class="filter-link " href="#">Sound & Speaker</a>
+                                </li>
+                                <li class="list-item default-hiden"><a class="filter-link " href="#">Shop Smartphone &
+                                        Tablets</a></li>
+                                <li class="list-item"><a
+                                        data-label='Show less<i class="fa fa-angle-up" aria-hidden="true"></i>'
+                                        class="btn-control control-show-more" href="#">Show more<i
+                                            class="fa fa-angle-down" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
                     </div><!-- brand widget-->
@@ -149,7 +158,8 @@
                         <div class="widget-content">
                             <ul class="list-style vertical-list has-count-index">
                                 <li class="list-item"><a class="filter-link " href="#">Red <span>(217)</span></a></li>
-                                <li class="list-item"><a class="filter-link " href="#">Yellow <span>(179)</span></a></li>
+                                <li class="list-item"><a class="filter-link " href="#">Yellow <span>(179)</span></a>
+                                </li>
                                 <li class="list-item"><a class="filter-link " href="#">Black <span>(79)</span></a></li>
                                 <li class="list-item"><a class="filter-link " href="#">Blue <span>(283)</span></a></li>
                                 <li class="list-item"><a class="filter-link " href="#">Grey <span>(116)</span></a></li>
@@ -168,7 +178,8 @@
                                 <li class="list-item"><a class="filter-link " href="#">xl</a></li>
                             </ul>
                             <div class="widget-banner">
-                                <figure><img src="{{asset('assets/images/size-banner-widget.jpg')}}" width="270" height="331" alt=""></figure>
+                                <figure><img src="{{asset('assets/images/size-banner-widget.jpg')}}" width="270"
+                                             height="331" alt=""></figure>
                             </div>
                         </div>
                     </div><!-- Size -->
@@ -180,8 +191,10 @@
                                 <li class="product-item">
                                     <div class="product product-widget-style">
                                         <div class="thumbnnail">
-                                            <a href="detail.html" title="Radiant-360 R6 Wireless Omnidirectional Speaker [White]">
-                                                <figure><img src="{{asset('assets/images/products/digital_01.jpg')}}" alt=""></figure>
+                                            <a href="detail.html"
+                                               title="Radiant-360 R6 Wireless Omnidirectional Speaker [White]">
+                                                <figure><img src="{{asset('assets/images/products/digital_01.jpg')}}"
+                                                             alt=""></figure>
                                             </a>
                                         </div>
                                         <div class="product-info">
@@ -194,8 +207,10 @@
                                 <li class="product-item">
                                     <div class="product product-widget-style">
                                         <div class="thumbnnail">
-                                            <a href="detail.html" title="Radiant-360 R6 Wireless Omnidirectional Speaker [White]">
-                                                <figure><img src="{{asset('assets/images/products/digital_17.jpg')}}" alt=""></figure>
+                                            <a href="detail.html"
+                                               title="Radiant-360 R6 Wireless Omnidirectional Speaker [White]">
+                                                <figure><img src="{{asset('assets/images/products/digital_17.jpg')}}"
+                                                             alt=""></figure>
                                             </a>
                                         </div>
                                         <div class="product-info">
@@ -208,8 +223,10 @@
                                 <li class="product-item">
                                     <div class="product product-widget-style">
                                         <div class="thumbnnail">
-                                            <a href="detail.html" title="Radiant-360 R6 Wireless Omnidirectional Speaker [White]">
-                                                <figure><img src="{{asset('assets/images/products/digital_18.jpg')}}" alt=""></figure>
+                                            <a href="detail.html"
+                                               title="Radiant-360 R6 Wireless Omnidirectional Speaker [White]">
+                                                <figure><img src="{{asset('assets/images/products/digital_18.jpg')}}"
+                                                             alt=""></figure>
                                             </a>
                                         </div>
                                         <div class="product-info">
@@ -222,8 +239,10 @@
                                 <li class="product-item">
                                     <div class="product product-widget-style">
                                         <div class="thumbnnail">
-                                            <a href="detail.html" title="Radiant-360 R6 Wireless Omnidirectional Speaker [White]">
-                                                <figure><img src="{{asset('assets/images/products/digital_20.jpg')}}" alt=""></figure>
+                                            <a href="detail.html"
+                                               title="Radiant-360 R6 Wireless Omnidirectional Speaker [White]">
+                                                <figure><img src="{{asset('assets/images/products/digital_20.jpg')}}"
+                                                             alt=""></figure>
                                             </a>
                                         </div>
                                         <div class="product-info">
