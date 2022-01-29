@@ -44,7 +44,8 @@
                                     </div>
                                     <div class="price-field sub-total"><p class="price">${{$item->subtotal}}</p></div>
                                     <div class="delete">
-                                        <a href="#" class="btn btn-delete" title="">
+                                        <a href="#" wire:click.prevent="destroy('{{$item->rowId}}')"
+                                           class="btn btn-delete" title="">
                                             <span>Delete from your cart</span>
                                             <i class="fa fa-times-circle" aria-hidden="true"></i>
                                         </a>
@@ -52,9 +53,9 @@
                                 </li>
                             @endforeach
                         </ul>
-                    @else
-                        <p>No Product in Cart</p>
-                    @endif
+                        @else
+                            <p>No Product in Cart</p>
+                        @endif
                 </div>
 
                 <div class="summary">
@@ -77,7 +78,7 @@
                                                                                      aria-hidden="true"></i></a>
                     </div>
                     <div class="update-clear">
-                        <a class="btn btn-clear" href="#">Clear Shopping Cart</a>
+                        <a class="btn btn-clear" href="#" wire:click.prevent="destroyAll()">Clear Shopping Cart</a>
                         <a class="btn btn-update" href="#">Update Shopping Cart</a>
                     </div>
                 </div>
@@ -85,7 +86,9 @@
                 <div class="wrap-show-advance-info-box style-1 box-in-site">
                     <h3 class="title-box">Most Viewed Products</h3>
                     <div class="wrap-products">
-                        <div class="products slide-carousel owl-carousel style-nav-1 equal-container" data-items="5" data-loop="false" data-nav="true" data-dots="false" data-responsive='{"0":{"items":"1"},"480":{"items":"2"},"768":{"items":"3"},"992":{"items":"3"},"1200":{"items":"5"}}' >
+                        <div class="products slide-carousel owl-carousel style-nav-1 equal-container" data-items="5"
+                             data-loop="false" data-nav="true" data-dots="false"
+                             data-responsive='{"0":{"items":"1"},"480":{"items":"2"},"768":{"items":"3"},"992":{"items":"3"},"1200":{"items":"5"}}'>
 
                             <div class="product product-style-2 equal-elem ">
                                 <div class="product-thumnail">
