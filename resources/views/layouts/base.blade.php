@@ -73,14 +73,20 @@
                             @if(Route::has('login'))
                                 @auth
                                     @if(Auth::user()->utype === 'ADM')
-                                        <li class="menu-item menu-item-has-children parent" >
-                                            <a title="My Account" href="#">My Account ({{Auth::user()->name}})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                            <ul class="submenu curency" >
-                                                <li class="menu-item" >
-                                                    <a title="Pound (GBP)" href="{{route('admin.dashboard')}}">Dashboard</a>
+                                        <li class="menu-item menu-item-has-children parent">
+                                            <a title="My Account" href="#">My Account ({{Auth::user()->name}})<i
+                                                    class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                            <ul class="submenu curency">
+                                                <li class="menu-item">
+                                                    <a title="Pound (GBP)"
+                                                       href="{{route('admin.dashboard')}}">Dashboard</a>
                                                 </li>
                                                 <li class="menu-item">
-                                                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                                                    <a href="{{route('admin.categories')}}" title="Categories">Categories</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="{{ route('logout') }}"
+                                                       onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                                                 </li>
                                                 <form id="logout-form" method="POST" action="{{ route('logout') }}">
                                                     @csrf
@@ -89,7 +95,7 @@
                                             </ul>
                                         </li>
                                     @else
-                                        <li class="menu-item menu-item-has-children parent" >
+                                        <li class="menu-item menu-item-has-children parent">
                                             <a title="My Account" href="#">My Account ({{Auth::user()->name}})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                             <ul class="submenu curency" >
                                                 <li class="menu-item" >
@@ -119,8 +125,8 @@
                 <div class="mid-section main-info-area">
 
                     <div class="wrap-logo-top left-section">
-                        <a href="index.html" class="link-to-home"><img src="{{asset('assets/images/logo-top-1.png')}}"
-                                                                       alt="mercado"></a>
+                        <a href="/" class="link-to-home"><img src="{{asset('assets/images/logo-top-1.png')}}"
+                                                              alt="mercado"></a>
                     </div>
 
                     @livewire('header-search-component')
