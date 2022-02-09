@@ -55,7 +55,7 @@ class AdminEditProductComponent extends Component
     public function updateProduct()
     {
 
-        $product = new Product();
+        $product = Product::find($this->product_id);
         $product->name = $this->name;
         $product->slug = $this->slug;
         $product->short_description = $this->short_description;
