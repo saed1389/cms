@@ -123,24 +123,27 @@
                                 <li class="list-item"><a class="filter-link " href="#">CPUs & Prosecsors</a></li>
                                 <li class="list-item"><a class="filter-link " href="#">Sound & Speaker</a></li>
                                 <li class="list-item"><a class="filter-link " href="#">Shop Smartphone & Tablets</a></li>
-                                <li class="list-item default-hiden"><a class="filter-link " href="#">Printer & Ink</a></li>
-                                <li class="list-item default-hiden"><a class="filter-link " href="#">CPUs & Prosecsors</a></li>
-                                <li class="list-item default-hiden"><a class="filter-link " href="#">Sound & Speaker</a></li>
-                                <li class="list-item default-hiden"><a class="filter-link " href="#">Shop Smartphone & Tablets</a></li>
-                                <li class="list-item"><a data-label='Show less<i class="fa fa-angle-up" aria-hidden="true"></i>' class="btn-control control-show-more" href="#">Show more<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                                <li class="list-item default-hiden"><a class="filter-link " href="#">Printer & Ink</a>
+                                </li>
+                                <li class="list-item default-hiden"><a class="filter-link " href="#">CPUs &
+                                        Prosecsors</a></li>
+                                <li class="list-item default-hiden"><a class="filter-link " href="#">Sound & Speaker</a>
+                                </li>
+                                <li class="list-item default-hiden"><a class="filter-link " href="#">Shop Smartphone &
+                                        Tablets</a></li>
+                                <li class="list-item"><a
+                                        data-label='Show less<i class="fa fa-angle-up" aria-hidden="true"></i>'
+                                        class="btn-control control-show-more" href="#">Show more<i
+                                            class="fa fa-angle-down" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
                     </div><!-- brand widget-->
 
                     <div class="widget mercado-widget filter-widget price-filter">
-                        <h2 class="widget-title">Price</h2>
-                        <div class="widget-content">
-                            <div id="slider-range"></div>
-                            <p>
-                                <label for="amount">Price:</label>
-                                <input type="text" id="amount" readonly>
-                                <button class="filter-submit">Filter</button>
-                            </p>
+                        <h2 class="widget-title">Price <span class="text-info">${{$min_price}} - ${{$max_price}}</span>
+                        </h2>
+                        <div class="widget-content" style="padding: 10px 5px 40px 5px">
+                            <div id="slider" wire:ignore></div>
                         </div>
                     </div><!-- Price-->
 
@@ -149,7 +152,8 @@
                         <div class="widget-content">
                             <ul class="list-style vertical-list has-count-index">
                                 <li class="list-item"><a class="filter-link " href="#">Red <span>(217)</span></a></li>
-                                <li class="list-item"><a class="filter-link " href="#">Yellow <span>(179)</span></a></li>
+                                <li class="list-item"><a class="filter-link " href="#">Yellow <span>(179)</span></a>
+                                </li>
                                 <li class="list-item"><a class="filter-link " href="#">Black <span>(79)</span></a></li>
                                 <li class="list-item"><a class="filter-link " href="#">Blue <span>(283)</span></a></li>
                                 <li class="list-item"><a class="filter-link " href="#">Grey <span>(116)</span></a></li>
@@ -232,16 +236,35 @@
                                         </div>
                                     </div>
                                 </li>
-
                             </ul>
                         </div>
                     </div><!-- brand widget-->
-
                 </div><!--end sitebar-->
-
             </div><!--end row-->
-
         </div><!--end container-->
-
     </main>
 </div>
+
+@push('scripts')
+    <script>
+        var slider = document.getElementById('slider');
+        noUiSlider.create(slider, {
+            start: [1, 1000],
+            connect: true,
+            range: {
+                'min': 1,
+                'max': 1000
+            },
+            pips: {
+                mode: 'steps',
+                stepped: true,
+                density: 4
+            }
+        });
+
+        slider.noUiSlider.on('update', function (value) {
+        @this.set('min_price', value[0]);
+        @this.set('max_price', value[1]);
+        });
+    </script>
+@endpush
