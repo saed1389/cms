@@ -620,6 +620,7 @@ class ComposerStaticInitb9373db58b6955ce189610e547889eaa
         'App\\Models\\HomeCategory' => __DIR__ . '/../..' . '/app/Models/HomeCategory.php',
         'App\\Models\\HomeSlider' => __DIR__ . '/../..' . '/app/Models/HomeSlider.php',
         'App\\Models\\Product' => __DIR__ . '/../..' . '/app/Models/Product.php',
+        'App\\Models\\Sale' => __DIR__ . '/../..' . '/app/Models/Sale.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
