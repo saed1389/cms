@@ -507,6 +507,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.min.js"
         integrity="sha512-T5Bneq9hePRO8JR0S/0lQ7gdW+ceLThvC80UjwkMRz+8q+4DARVZ4dqKoyENC7FcYresjfJ6ubaOgIE35irf4w=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.tiny.cloud/1/wkb9iql3yyt5gsnnkm5yriwd1qv4i9lt1kikpcmniurferk6/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script>
 @livewireScripts
 
 @stack('scripts')
