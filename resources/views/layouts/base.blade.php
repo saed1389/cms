@@ -48,29 +48,42 @@
                 <div class="container">
                     <div class="topbar-menu left-menu">
                         <ul>
-                            <li class="menu-item" >
-                                <a title="Hotline: (+123) 456 789" href="#" ><span class="icon label-before fa fa-mobile"></span>Hotline: (+123) 456 789</a>
+                            <li class="menu-item">
+                                <a title="Hotline: (+123) 456 789" href="#"><span
+                                        class="icon label-before fa fa-mobile"></span>Hotline: (+123) 456 789</a>
                             </li>
                         </ul>
                     </div>
                     <div class="topbar-menu right-menu">
                         <ul>
                             <li class="menu-item lang-menu menu-item-has-children parent">
-                                <a title="English" href="#"><span class="img label-before"><img src="assets/images/lang-en.png" alt="lang-en"></span>English<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                <ul class="submenu lang" >
-                                    <li class="menu-item" ><a title="hungary" href="#"><span class="img label-before"><img src="assets/images/lang-hun.png" alt="lang-hun"></span>Hungary</a></li>
-                                    <li class="menu-item" ><a title="german" href="#"><span class="img label-before"><img src="assets/images/lang-ger.png" alt="lang-ger" ></span>German</a></li>
-                                    <li class="menu-item" ><a title="french" href="#"><span class="img label-before"><img src="assets/images/lang-fra.png" alt="lang-fre"></span>French</a></li>
-                                    <li class="menu-item" ><a title="canada" href="#"><span class="img label-before"><img src="assets/images/lang-can.png" alt="lang-can"></span>Canada</a></li>
+                                <a title="English" href="#"><span class="img label-before"><img
+                                            src="{{asset('assets/images/lang-en.png')}}" alt="lang-en"></span>English<i
+                                        class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <ul class="submenu lang">
+                                    <li class="menu-item"><a title="hungary" href="#"><span
+                                                class="img label-before"><img
+                                                    src="{{asset('assets/images/lang-hun.png')}}" alt="lang-hun"></span>Hungary</a>
+                                    </li>
+                                    <li class="menu-item"><a title="german" href="#"><span class="img label-before"><img
+                                                    src="{{asset('assets/images/lang-ger.png')}}" alt="lang-ger"></span>German</a>
+                                    </li>
+                                    <li class="menu-item"><a title="french" href="#"><span class="img label-before"><img
+                                                    src="{{asset('assets/images/lang-fra.png')}}" alt="lang-fre"></span>French</a>
+                                    </li>
+                                    <li class="menu-item"><a title="canada" href="#"><span class="img label-before"><img
+                                                    src="{{asset('assets/images/lang-can.png')}}" alt="lang-can"></span>Canada</a>
+                                    </li>
                                 </ul>
                             </li>
-                            <li class="menu-item menu-item-has-children parent" >
-                                <a title="Dollar (USD)" href="#">Dollar (USD)<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                <ul class="submenu curency" >
-                                    <li class="menu-item" >
+                            <li class="menu-item menu-item-has-children parent">
+                                <a title="Dollar (USD)" href="#">Dollar (USD)<i class="fa fa-angle-down"
+                                                                                aria-hidden="true"></i></a>
+                                <ul class="submenu curency">
+                                    <li class="menu-item">
                                         <a title="Pound (GBP)" href="#">Pound (GBP)</a>
                                     </li>
-                                    <li class="menu-item" >
+                                    <li class="menu-item">
                                         <a title="Euro (EUR)" href="#">Euro (EUR)</a>
                                     </li>
                                     <li class="menu-item" >
@@ -162,7 +175,10 @@
                             <a href="#" class="link-direction">
                                 <i class="fa fa-heart" aria-hidden="true"></i>
                                 <div class="left-info">
-                                    <span class="index">0 item</span>
+                                    @if(Cart::instance('wishlist')->count() > 0)
+                                        <span class="index">{{Cart::instance('wishlist')->count()}} item</span>
+                                    @endif
+
                                     <span class="title">Wishlist</span>
                                 </div>
                             </a>
@@ -171,8 +187,8 @@
                             <a href="#" class="link-direction">
                                 <i class="fa fa-shopping-basket" aria-hidden="true"></i>
                                 <div class="left-info">
-                                    @if(Cart::count() > 0)
-                                        <span class="index">{{Cart::count()}} items</span>
+                                    @if(Cart::instance('cart')->count() > 0)
+                                        <span class="index">{{Cart::instance('cart')->count()}} items</span>
                                     @endif
                                     <span class="title">CART</span>
                                 </div>
@@ -375,7 +391,7 @@
                             <h3 class="item-header">We Using Safe Payments:</h3>
                             <div class="item-content">
                                 <div class="wrap-list-item wrap-gallery">
-                                    <img src="assets/images/payment.png" style="max-width: 260px;">
+                                    <img src="{{asset('assets/images/payment.png')}}" style="max-width: 260px;">
                                 </div>
                             </div>
                         </div>
@@ -404,8 +420,16 @@
                             <div class="item-content">
                                 <div class="wrap-list-item apps-list">
                                     <ul>
-                                        <li><a href="#" class="link-to-item" title="our application on apple store"><figure><img src="assets/images/brands/apple-store.png" alt="apple store" width="128" height="36"></figure></a></li>
-                                        <li><a href="#" class="link-to-item" title="our application on google play store"><figure><img src="assets/images/brands/google-play-store.png" alt="google play store" width="128" height="36"></figure></a></li>
+                                        <li><a href="#" class="link-to-item" title="our application on apple store">
+                                                <figure><img src="{{asset('assets/images/brands/apple-store.png')}}"
+                                                             alt="apple store" width="128" height="36"></figure>
+                                            </a></li>
+                                        <li><a href="#" class="link-to-item"
+                                               title="our application on google play store">
+                                                <figure><img
+                                                        src="{{asset('assets/images/brands/google-play-store.png')}}"
+                                                        alt="google play store" width="128" height="36"></figure>
+                                            </a></li>
                                     </ul>
                                 </div>
                             </div>
